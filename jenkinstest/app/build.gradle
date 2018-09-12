@@ -32,7 +32,8 @@ android {
                         def outputFile = output.outputFile
                         if (outputFile != null && outputFile.name.endsWith('.apk')) {
                             def fileName = "${releaseTime()}_com.andli.myproject_${defaultConfig.versionName}.apk"
-                            println "目录： "+outputFile.parent;
+                            File of = new File("/Users/lilin/Downloads/APK");
+                            of.mkdirs();
                             output.outputFile = new File("/Users/lilin/Downloads/APK", fileName)
                         }
                     }
