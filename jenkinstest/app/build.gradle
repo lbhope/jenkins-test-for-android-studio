@@ -32,8 +32,7 @@ android {
                         def outputFile = output.outputFile
                         if (outputFile != null && outputFile.name.endsWith('.apk')) {
                             def fileName = "${releaseTime()}_com.andli.myproject_${defaultConfig.versionName}.apk"
-                            File file1 = new File("/Users/lilin/Downloads/APK");
-                            file1.deleteDir();
+                            println "目录： "+outputFile.parent;
                             output.outputFile = new File("/Users/lilin/Downloads/APK", fileName)
                         }
                     }
